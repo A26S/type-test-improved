@@ -8,7 +8,7 @@ This app was made as an accessible and easy-to-use tool to practice typing abili
 ### Clone this repository
 
 ```shell
-git clone git@github.com:matveyclark/type-test.git
+git clone git@github.com:A26S/type-test-improved.git
 cd type-test
 ```
 
