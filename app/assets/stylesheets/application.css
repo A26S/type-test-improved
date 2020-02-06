@@ -1,0 +1,1284 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: darkslateblue; */
+    color: blanchedalmond;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Merriweather';
+    background-color: darkslateblue;
+    perspective: 100vh;
+}
+
+
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+.typetest {
+    position: absolute;
+    z-index: 999;
+    margin-right: 15px;
+    padding: 0 1em;
+    top: 20px;
+    left: 50px;
+    animation: type 0.3s ease infinite alternate;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.typetest:nth-child(1) {
+    animation-delay: -.8s;
+    left: calc(calc(3 * 20px) - 1em);
+}
+
+.typetest:nth-child(2) {
+    animation-delay: -.7s;
+    left: calc(calc(3 * 40px) - 1em);
+}
+
+.typetest:nth-child(3) {
+    animation-delay: -.6s;
+    left: calc(calc(3 * 60px) - 1em);
+}
+
+.typetest:nth-child(4) {
+    animation-delay: -.5s;
+    left: calc(calc(3 * 80px) - 1em);
+}
+
+.typetest:nth-child(5) {
+    animation-delay: -.4s;
+    left: calc(calc(3 * 100px) - 1em);
+}
+
+.typetest:nth-child(6) {
+    animation-delay: -.3s;
+    left: calc(calc(3 * 120px) - 1em);
+}
+
+.typetest:nth-child(7) {
+    animation-delay: -.2s;
+    left: calc(calc(3 * 140px) - 1em);
+}
+
+.typetest:nth-child(8) {
+    animation-delay: -.1s;
+    left: calc(calc(3 * 160px) - 1em);
+    padding-right: 0;
+}
+
+.logo {
+    font-size: 5rem;
+    font-weight: 800;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-link:visited {
+    color: #000;
+}
+
+.greeting-text {
+    margin-right: 2em;
+}
+
+.cta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta a:visited {
+    color: blanchedalmond;
+}
+
+.main-left a,
+.main-left a:visited {
+    padding: 1em 1.6em 1em;
+    border-radius: 4px;
+    border: 1px solid blanchedalmond;
+    text-decoration: none;
+    margin-right: .8em;
+    transition: .2s ease;
+    color: blanchedalmond;
+    display: inline-block;
+    animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.main-left a:first-of-type {
+    background-color: blanchedalmond;
+    color: darkslateblue;
+}
+
+.main-left a:hover {
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-3px)
+}
+
+.main-left a:first-of-type:hover {
+    background-color: darkslateblue;
+    color: blanchedalmond;
+}
+
+.main {
+    height: 100vh;
+}
+
+.main-content {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-heading {
+    font-size: 3.6rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: .5em;
+}
+
+.main-para {
+    margin-bottom: 1.5em;
+    font-size: 1.375rem;
+    line-height: 1.6;
+    color: silver;
+    opacity: .6;
+}
+
+.main-image {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    display: block;
+    filter: invert()
+
+}
+
+.lights {
+    animation: flicker 1s infinite;
+}
+
+.wiggly {
+    animation: wiggle 2.5s infinite;
+}
+
+.wiggly:hover {
+    animation: wigglepulse .1s infinite;
+}
+
+.home-image {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: top center;
+}
+
+.reg {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.reg-heading {
+    margin-bottom: .2em;
+    font-size: 2.5rem;
+}
+
+.user_notice {
+    margin-bottom: 1em;
+}
+
+.login-registration {
+    display: flex;
+    align-items: flex-end;
+}
+
+.main-right input {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: .5em 1em;
+    margin: .3em 0;
+    background-color: dimgray;
+}
+
+.main-right input:focus {
+    outline: 1px solid darkslateblue;
+}
+
+.main-right .btn {
+    padding: 1em 1.6em 1em;
+    border-radius: 4px;
+    border: 1px solid blanchedalmond;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: .2s ease;
+    color: blanchedalmond;
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    cursor: pointer;
+    margin-right: 2em;
+}
+
+.main-right .btn:hover {
+    background: #000;
+    color: blanchedalmond;
+}
+
+.main-right .btn:focus {
+    outline: 1px solid darkslateblue;
+}
+
+.reg-submit {
+    display: flex;
+    align-items: flex-end;
+}
+
+.main-right.registration {
+    width: 45%;
+}
+
+/* ----- Homepage ----- */
+
+.spinner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 40vw;
+    /* background-color: whitesmoke; */
+    /* border-left: 15px solid green;
+    border-right: 15px solid yellow;
+    border-top: 15px solid red; 
+    animation: rotate 1.2s ease-in-out infinite; */
+}
+
+.spinner-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 2em; */
+}
+
+.spinner-sector {
+    position: absolute;
+    border-radius: 50%;
+    height: 50vh;
+    width: 50vh;
+    border: 15px solid transparent;
+    /* background-color: whitesmoke; */
+    mix-blend-mode: difference;
+}
+
+.spinner-sector-1 {
+    border-top: 15px solid fuchsia;
+    animation: rotate 2s ease-out infinite;
+}
+
+.spinner-sector-2 {
+    border-top: 15px solid salmon;
+    animation: rotate 1.5s ease-in infinite;
+}
+
+.spinner-sector-3 {
+    border-top: 15px solid forestgreen;
+    animation: rotate 1s infinite;
+}
+
+/* Tests index page */
+
+.tests-para {
+    text-align: center;
+    font-weight: 400;
+    margin-top: 5em;
+}
+
+.main-para.test {
+    font-size: 1rem;
+    margin-top: 2em;
+}
+
+.test-item {
+    color: #000;
+    background-color: darkslateblue;
+    border-radius: 3px;
+    height: 40vh;
+    /* width: 20vw; */
+    min-width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    transition: .2s ease;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in;
+    transform: translateZ(-100px)
+}
+
+.test-item:hover {
+    transform: rotateY(-90deg);
+}
+
+.test-side {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid silver;
+    border-radius: .5rem;
+    backface-visibility: hidden;
+}
+
+.test-facts {
+    padding: 0rem 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateZ(125px);
+}
+
+.test-start {
+    transform: rotateY(90deg) translateZ(127px);
+    background-color: black;
+}
+
+/* .test-start:nth-child(1) {
+    transform: translateZ()
+} */
+
+.tests-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4em;
+}
+
+.test-item__desc {
+    opacity: .6;
+}
+
+.test-item p:not(:last-child) {
+    margin-bottom: 2em;
+}
+
+.test-item a {
+    text-decoration: none;
+    color: blanchedalmond;
+    padding: 1em;
+    text-align: center;
+    border: 1px solid blanchedalmond;
+    border-radius: .5em;
+    transition: .2s ease;
+}
+
+.test-item a:hover {
+    background-color: rgba(71, 61, 139, 0.534);
+    color: blanchedalmond;
+}
+
+/* Test show page */
+
+.test-show {
+    font-weight: 900;
+}
+
+.test-content {
+    margin-top: 2em;
+    font-weight: 400;
+}
+
+.test-desc {
+    margin-top: 2em;
+    font-weight: 400;
+}
+
+form.button_to {
+    display: inline-block;
+    margin-left: 42.5%;
+}
+
+.button_to input[type=submit] {
+    background-color: darkslateblue;
+    color: blanchedalmond;
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid blanchedalmond;
+    border-radius: 4px;
+    transition: .2s ease;
+}
+
+.button_to input[type=submit]:hover {
+    transform: scale(1.1);
+    background-color: #000;
+    color: blanchedalmond;
+}
+
+
+/* Test session page */
+
+#test_session_user_input {
+    outline: none;
+    background-color: transparent;
+    border: 2px solid silver;
+    border-radius: .5rem;
+    resize: none;
+    width: 100%;
+    height: 15rem;
+    margin: auto;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    font-family: "Merriweather";
+}
+
+#test_session_user_input:focus {
+    border-color: blanchedalmond;
+}
+
+.session-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Merriweather";
+    margin-top: 50px;
+}
+
+.test-session-content {
+    margin-top: -5rem;
+    font-size: 1.5rem;
+    margin-left: calc(1rem + 2px);
+    margin-right: calc(1rem + 2px);
+}
+
+form.edit_test_session {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+form.edit_test_session label {
+    margin: 2em 0;
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+form.edit_test_session input[type=text] {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 3em;
+}
+
+
+form.edit_test_session input[type=submit] {
+    margin-top: 1.5em;
+    background-color: #fff;
+    color: #000;
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 4px;
+    transition: .2s ease;
+}
+
+form.edit_test_session input[type=submit]:hover {
+    transform: scale(1.1);
+    background-color: #000;
+    color: #fff;
+}
+
+/* Test complete page */
+
+.success-photo {
+    margin-left: 10%;
+    margin-bottom: 2em;
+    width: 80%;
+    filter: invert();
+}
+
+.main-left form.button_to {
+    display: inline-block;
+    margin-left: 0;
+}
+
+/* Test show page */
+
+.instructions-list {
+    margin: 2em 0;
+}
+
+.instructions-list-item {
+    padding: .8em;
+    font-weight: 400;
+}
+
+/* All reports page */
+
+.reports-index-list {
+    list-style: none;
+    margin-top: 2em;
+}
+
+.reports-list-link {
+    border-top: 1px solid #d3d3d3;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reports-list-link a:visited {
+    color: #000;
+}
+
+/* Reports show page */
+
+.reports {
+    padding-top: 17.5em;
+}
+
+.results-division {
+    display: flex;
+    justify-content: center;
+}
+
+.results-title {
+    display: none;
+    text-transform: uppercase;
+    font-size: 50px;
+    padding: 15px calc(50% - 120px);
+    text-shadow: 1px 1px lime;
+    margin-bottom: 200px;
+    animation-name: fade-in;
+    animation-duration: 6s;
+}
+
+.dna {
+    position: absolute;
+    margin: -110px calc(100vw / 3.4);
+    z-index: -1;
+    animation-name: fade-in;
+    animation-duration: 6s;
+}
+
+.boring {
+    border-radius: .5em;
+    border-bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: grid;
+    grid-template-rows: repeat(3, 15vh);
+    height: 45vh;
+    animation-name: fade-in;
+    animation-duration: 9s;
+    max-width: 45%;
+}
+
+.interesting {
+    border-radius: .5em;
+    border-bottom: 0;
+    margin-left: 100px;
+    background-color: rgba(0,0,0,0.3);
+    display: grid;
+    grid-template-rows: repeat(3, 15vh);
+    height: 45vh;
+    animation-name: fade-in;
+    animation-duration: 12s;
+    max-width: 45%;
+}
+
+.report-facts {
+    /* display: block;
+    margin: auto; */
+    padding: 1rem ;
+    text-align: center;
+}
+
+.report-facts:last-of-type {
+    border-bottom: 0;
+}
+
+.report-facts:hover {
+    background-color: rgba(0,0,0);
+    border: 1px solid lime;
+    border-radius: .5em;
+}
+
+.test-score {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.tests-para:nth-of-type(2) {
+    margin-top: .5em;
+}
+
+.report-subheading {
+    text-transform: uppercase;
+    opacity: .6;
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+/* Animation keyframes */
+
+@keyframes type {
+    100% { 
+    top: -10px; 
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 10px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0) }
+    100% { transform: rotate(360deg) }
+}
+
+@keyframes wiggle {
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+        -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    10% {
+        -webkit-transform: rotate(8deg);
+              transform: rotate(8deg);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+    }
+    50% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+     }
+    30%,
+    70% {
+        -webkit-transform: rotate(10deg);
+              transform: rotate(10deg);
+    }
+    80% {
+        -webkit-transform: rotate(-8deg);
+              transform: rotate(-8deg);
+    }
+    90% {
+        -webkit-transform: rotate(8deg);
+              transform: rotate(8deg);
+    }
+  }
+
+@keyframes wigglepulse {
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+        -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+        -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    10% {
+        -webkit-transform: rotate(8deg);
+              transform: rotate(8deg);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+        -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+     }
+    30%,
+    70% {
+        -webkit-transform: rotate(10deg);
+              transform: rotate(10deg);
+    }
+    80% {
+        -webkit-transform: rotate(-8deg);
+              transform: rotate(-8deg);
+    }
+    90% {
+        -webkit-transform: rotate(8deg);
+              transform: rotate(8deg);
+    }
+  }
+
+  @keyframes flicker {
+    0%,
+    31.98%,
+    32.82%,
+    34.98%,
+    35.72%,
+    36.98%,
+    37.62%,
+    67.98%,
+    68.42%,
+    95.98%,
+    96.72%,
+    98.98%,
+    99.62%,
+    100% {
+      opacity: 1;
+    }
+
+    32%,
+    32.8%,
+    35%,
+    35.7%,
+    37%,
+    37.6%,
+    68%,
+    68.4%,
+    96%,
+    96.7%,
+    99%,
+    99.6% {
+      opacity: 0;
+    }
+  }
+
+@keyframes fade-in {
+    0%,40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* ------ DNA ------- */
+
+
+.line{
+    position: absolute;
+    top: 0px;
+    width: 2px;
+    height: 8px;
+    background-color: red;
+}
+
+.circle{
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: blue;
+}
+.circle-top{
+    top: 0px;
+    left: -3.5px;
+}
+.circle-bottom{
+    bottom: 0px;
+    left: -3.5px;
+}
+
+.dot{
+    position: absolute;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    left: -1.5px;
+}
+
+.line1{
+    margin-left: 0px;
+    background-color: #2410CB;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+}
+.line1 > span{
+    background-color: #D4141E;
+}
+.line1 > .dotted > .dot{
+    background-color: #D4141E;
+}
+.line1 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+}
+.line1 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+}
+.line1 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+}
+.line1 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+}
+
+.line2{
+    margin-left: 35px;
+    background-color: #852DF4;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+}
+.line2 > span{
+    background-color: #FC7E48;
+}
+.line2 > .dotted > .dot{
+    background-color: #FC7E48;
+}
+.line2 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+}
+.line2 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+}
+.line2 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+}
+.line2 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+}
+
+.line3{
+    margin-left: 70px;
+    background-color: #F42DF1;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+}
+.line3 > span{
+    background-color: #EDEB29;
+}
+.line3 > .dotted > .dot{
+    background-color: #EDEB29;
+}
+.line3 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+}
+.line3 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+}
+.line3 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+}
+.line3 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+}
+
+.line4{
+    margin-left: 105px;
+    background-color: #F91396;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+}
+.line4 > span{
+    background-color: #ACED29;
+}
+.line4 > .dotted > .dot{
+    background-color: #ACED29;
+}
+.line4 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+}
+.line4 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+}
+.line4 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+}
+.line4 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+}
+
+.line5{
+    margin-left: 140px;
+    background-color: #D4141E;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+}
+.line5 > span{
+    background-color: #4EF02B;
+}
+.line5 > .dotted > .dot{
+    background-color: #4EF02B;
+}
+.line5 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+}
+.line5 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+}
+.line5 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+}
+.line5 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+}
+
+.line6{
+    margin-left: 175px;
+    background-color: #FC7E48;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+}
+.line6 > span{
+    background-color: #38E790;
+}
+.line6 > .dotted > .dot{
+    background-color: #38E790;
+}
+.line6 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+}
+.line6 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+}
+.line6 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+}
+.line6 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+}
+
+.line7{
+    margin-left: 210px;
+    background-color: #EDEB29;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+}
+.line7 > span{
+    background-color: #25EACC;
+}
+.line7 > .dotted > .dot{
+    background-color: #25EACC;
+}
+.line7 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+}
+.line7 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+}
+.line7 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+}
+.line7 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+}
+
+.line8{
+    margin-left: 245px;
+    background-color: #ACED29;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+}
+.line8 > span{
+    background-color: #309CDF;
+}
+.line8 > .dotted > .dot{
+    background-color: #309CDF;
+}
+.line8 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+}
+.line8 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+}
+.line8 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+}
+.line8 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+}
+
+.line9{
+    margin-left: 280px;
+    background-color: #4EF02B;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+}
+.line9 > span{
+    background-color: #2544E7;
+}
+.line9 > .dotted > .dot{
+    background-color: #2544E7;
+}
+.line9 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+}
+.line9 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+}
+.line9 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+}
+.line9 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+}
+
+.line10{
+    margin-left: 315px;
+    background-color: #38E790;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+}
+.line10 > span{
+    background-color: #852DF4;
+}
+.line10 > .dotted > .dot{
+    background-color: #852DF4;
+}
+.line10 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+}
+.line10 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+}
+.line10 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+}
+.line10 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+}
+
+.line11{
+    margin-left: 350px;
+    background-color: #25EACC;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+}
+.line11 > span{
+    background-color: #F42DF1;
+}
+.line11 > .dotted > .dot{
+    background-color: #F42DF1;
+}
+.line11 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+
+}
+.line11 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+}
+.line11 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+}
+.line11 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+}
+
+@-webkit-keyframes line{
+    0%{height: 4px; top: 0px; left: 0px; -webkit-transform: rotate(-65deg)}
+    10%{height: 220px; top: -110px; left: 15px;}
+    45%{height: 200px; top: -100px; left: 25px;}
+    70%{height: 8px; top: 0px; left: 25px; -webkit-transform: rotate(0deg);}
+    100%{height: 8px; top: 0px; left: 15px; -webkit-transform: rotate(0deg);}
+}
+@-webkit-keyframes dot-top{
+    0%{top: -30px}
+    10%{top: -30px;}
+    45%{top: -25px;}
+    60%{top: 0px;}
+    100%{top: 0px;}
+}
+@-webkit-keyframes dot-bottom{
+    0%{bottom: -30px}
+    10%{bottom: -30px;}
+    45%{bottom: -25px;}
+    60%{bottom: 0px;}
+    100%{bottom: 0px;}
+}
+@-webkit-keyframes dot-middle-top{
+    0%{}
+    10%{}
+    45%{top: 98px;}
+    70%{top: -50px;}
+    85%{top: 0px;}
+    100%{top: 0px;}
+}
+@-webkit-keyframes dot-middle-bottom{
+    0%{}
+    10%{}
+    45%{bottom: 98px;}
+    70%{bottom: -50px;}
+    85%{bottom: 0px;}
+    100%{bottom: 0px;}
+}
+
+@keyframes line{
+    0%{height: 4px; top: 0px; left: 0px; transform: rotate(-65deg)}
+    10%{height: 220px; top: -110px; left: 15px;}
+    45%{height: 200px; top: -100px; left: 25px;}
+    70%{height: 8px; top: 0px; left: 25px; transform: rotate(0deg);}
+    100%{height: 8px; top: 0px; left: 15px; transform: rotate(0deg);}
+}
+@keyframes dot-top{
+    0%{top: -30px}
+    10%{top: -30px;}
+    45%{top: -25px;}
+    60%{top: 0px;}
+    100%{top: 0px;}
+}
+@keyframes dot-bottom{
+    0%{bottom: -30px}
+    10%{bottom: -30px;}
+    45%{bottom: -25px;}
+    60%{bottom: 0px;}
+    100%{bottom: 0px;}
+}
+@keyframes dot-middle-top{
+    0%{}
+    10%{}
+    45%{top: 78px;}
+    70%{top: -50px;}
+    85%{top: 0px;}
+    100%{top: 0px;}
+}
+@keyframes dot-middle-bottom{
+    0%{}
+    10%{}
+    45%{bottom: 78px;}
+    70%{bottom: -50px;}
+    85%{bottom: 0px;}
+    100%{bottom: 0px;}
+}

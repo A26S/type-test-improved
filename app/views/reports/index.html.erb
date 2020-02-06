@@ -1,0 +1,36 @@
+<section class="reports-list">
+    <div class="wrapper">
+        <% if @sessions.length > 0 %>
+
+            <h1 class="tests-para">All Reports</h1>
+
+            <ul class="reports-index-list">
+
+            <% @sessions.each do |session| %>
+
+                <li class="reports-list-link">
+                    
+                    <%= link_to session.test_name, report_path(session.report) %>
+                    <p>Grade: <%= session.test_report_grade %></p>
+                    <p>Time elapsed: <%= session.time_elapsed %> </p>
+
+                </li>
+
+            <% end %>
+
+            </ul>
+
+        <% else %>
+            <div class="main-content">
+                <div class="main-left">
+                    <h1 class="main-heading">Oops... no tests taken yet.</h1>
+                    <p class="main-para">Click the button below <br> to take your first typing test!</p>
+                    <%= link_to 'Take Test', tests_path %>
+                </div>
+                <div class="main-right">
+                    <img src="https://i.ibb.co/zPXD4Dn/08.png" alt="08" border="0">
+                </div>
+            </div>
+        <% end %>
+    </div>
+</section>

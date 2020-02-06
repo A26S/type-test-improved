@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TypeTest</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900&display=swap" rel="stylesheet">
+  </head>
+    <header>
+      <div class="wrapper">
+        <nav class="navigation">
+          <% if logged_in?  %>
+            <a class="logo-link" href="/homepage"><p class="logo">
+          <% else %>
+            <a class="logo-link" href="/"><p class="logo">
+          <% end %>
+          <span class="typetest">T</span>
+          <span class="typetest">y</span>
+          <span class="typetest">p</span>
+          <span class="typetest">e</span>
+          <span class="typetest">T</span>
+          <span class="typetest">e</span>
+          <span class="typetest">s</span>
+          <span class="typetest">t</span>
+          </p></a>
+          <div class="cta">
+            <% if logged_in? %>
+              <p class="greeting-text">Hello, <strong><%= current_user.first_name %> </strong> </p>
+              <%= link_to 'Logout', logout_path, method: :delete %>
+            <% end %>
+          </div>
+        </nav>
+      </div>
+    </header>
+  <body>
+    <%= yield %>
+  </body>
+</html>

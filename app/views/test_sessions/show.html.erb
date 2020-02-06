@@ -1,0 +1,14 @@
+<section class="test-session">
+    <div class="wrapper">
+        <div class="session-content">
+            <p class="test-session-content"> <%= @test_session.test_content %> </p>
+
+            <%= form_for @test_session do |f| %>
+
+                <%= f.label 'input the above content' %>
+                <%= f.text_field :user_input, :required => true, :autocomplete => 'off', autofocus: true, spellcheck: false, placeholder: "press 'Enter' to submit!" %>
+
+            <% end %>
+        </div>
+    </div>
+</section>
