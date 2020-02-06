@@ -9,7 +9,7 @@ This app was made as an accessible and easy-to-use tool to practice typing abili
 
 ```shell
 git clone git@github.com:A26S/type-test-improved.git
-cd type-test
+cd type-test-improved
 ```
 
 ### Install dependencies
